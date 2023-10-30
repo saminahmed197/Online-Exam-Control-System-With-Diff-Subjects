@@ -7,7 +7,8 @@
     Add Subject
   </button>
 
-
+   {{-- Showing data --}}
+   <br> <br>
   <table class="table table-hover table-striped">
     <thead>
       <tr>
@@ -152,7 +153,7 @@
         $(".editButton").click(function(){
             var subject_id = $(this).attr('data-id');
             var subject = $(this).attr('data-subject');
-
+            
             $("#edit_subject").val(subject);
             $("#edit_subject_id").val(subject_id);
            

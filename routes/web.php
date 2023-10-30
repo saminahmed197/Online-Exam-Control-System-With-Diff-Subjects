@@ -37,6 +37,13 @@ Route::group(['middleware'=>['web','checkAdmin']],function(){
     // exams route
     Route::get('/admin/exam',[AdminController::class,'examDashboard']);
     Route::post('/add-exam',[AdminController::class,'addExam'])->name('addExam');
+    Route::get('/get-exam-detail/{id}',[AdminController::class,'getExamDetail'])->name('getExamDetail');
+    Route::post('/update-exam',[AdminController::class,'updateExam'])->name('updateExam');
+    Route::post('/delete-exam',[AdminController::class,'deleteExam'])->name('deleteExam');
+
+    // Q & A routes
+    Route::get('/admin/qna-ans',[AdminController::class,'qnaDashboard']);
+    Route::post('/add-qna-ans',[AdminController::class,'addQna'])->name('addQna');
 
 });
 
@@ -51,6 +58,3 @@ Route::get('/forget-password',[AuthController::class,'forgetPasswordLoad']);
 Route::post('/forget-password',[AuthController::class,'forgetPassword'])->name('forgetPassword');
 Route::get('/reset-password',[AuthController::class,'resetPasswordLoad']);
 Route::post('/reset-password',[AuthController::class,'resetPassword'])->name('resetPassword');
-
-
-//new route

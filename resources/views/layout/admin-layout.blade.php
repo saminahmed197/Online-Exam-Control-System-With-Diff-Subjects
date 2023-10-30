@@ -21,7 +21,7 @@
 	          <span class="sr-only">Toggle Menu</span>
 	        </button>
         </div>
-	  		<h1><a href="admin/dashboard" class="logo">Admin Dashboard</a></h1>
+	  		<h1><a href="dashboard" class="logo">Admin Dashboard</a></h1>
               <ul class="list-unstyled components mb-5">
           <li class="active">
             <a href="/admin/dashboard"><span class="fa fa-book mr-3"></span> Subject</a>
@@ -30,7 +30,11 @@
           <li class="active">
             <a href="/admin/exam"><span class="fa fa-tasks mr-3"></span> Exam</a>
           </li>
-          
+
+          <li class="active">
+            <a href="/admin/qna-ans"><span class="fa fa-question-circle mr-3"></span> Q & A</a>
+          </li>
+
           <li>
             <a href="/logout"><span class="fa fa-sign-out mr-3"></span> Log Out</a>
           </li>
