@@ -186,7 +186,8 @@ class AdminController extends Controller
 
 
     public function qnaDashboard(){
-        return view('admin.qnaDashboard');
+        $questions = Question::with('answers')->get();
+        return view('admin.qnaDashboard', compact('questions'));
     }
 
     
@@ -214,7 +215,7 @@ class AdminController extends Controller
             return response()->json(
                 [
                     'success' => true,
-                    'msg' => 'Exam added Successfully'
+                    'msg' => 'Question added Successfully'
                 ]
                 );
 

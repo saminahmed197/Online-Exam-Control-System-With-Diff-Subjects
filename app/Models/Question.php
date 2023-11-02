@@ -9,7 +9,11 @@ class Question extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'question',
-
+        'question'
     ];
+
+    public function answers(){
+        return $this->hasMany(Answer::class,'questions_id','id');
+        // questions_id is repetitive and it matches with question table id column
+    }
 }
